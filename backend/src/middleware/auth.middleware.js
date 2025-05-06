@@ -12,7 +12,7 @@ try {
     if(!decoded){
         return res.status(401).json({message:"Unauthorized-Token invalid"});
     }
-    const user = await User.findById(decoded.userId);
+    const user = await User.findById(decoded.userId).select('-password');
     if(!user){
         return res.status(401).json({message:"Unauthorized-User not found"});
     }
