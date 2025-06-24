@@ -1,6 +1,7 @@
 import React from 'react'
 import { ShipWheelIcon, EyeIcon, EyeOffIcon } from "lucide-react"
 import { Link } from 'react-router-dom'
+
 import pic from '../assets/call-pana.png'
 import { useMutation,useQueryClient } from '@tanstack/react-query'
 
@@ -20,6 +21,7 @@ function SignupPage() {
       queryClient.invalidateQueries({queryKey: ['authUser']})
     }
   })
+
   const handleSignup = async (e) => {
     e.preventDefault();
     signupMutation(signupData)

@@ -1,9 +1,11 @@
 import React from "react";
 import { ShipWheelIcon } from "lucide-react";
 import { useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+
 import { login } from "../libs/api";
-import { Link } from "react-router-dom";
-import { useQueryClient, useMutation } from "@tanstack/react-query";
+import { Link } from "react-router";
+import pic from '../assets/call-pana.png'
 
 function LoginPage() {
   const [loginData, setLoginData] = useState({ email: "", password: "" });
@@ -18,6 +20,7 @@ function LoginPage() {
       queryClient.invalidateQueries({ queryKey: ["authUser"] });
     },
   });
+  // const{isPending, error, mutate: loginMutation} = useLogin();
   const handleLogin = (e) => {
     e.preventDefault();
     loginMutation(loginData);
@@ -115,7 +118,7 @@ function LoginPage() {
           <div className="max-w-md p-8">
             {/* Illustration */}
             <div className="relative aspect-square max-w-sm mx-auto">
-              <img src="/i.png" alt="Language connection illustration" className="w-full h-full" />
+            <img src={pic} alt="Language connection illustration" className="w-full h-full object-contain" />
             </div>
 
             <div className="text-center space-y-3 mt-6">
