@@ -1,0 +1,21 @@
+{
+  "name": "video-calling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sok97/videocallingapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sok97/videocallingapp/issues"
+  },
+  "homepage": "https://github.com/sok97/videocallingapp#readme"
+}
