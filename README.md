@@ -1214,4 +1214,5 @@ Copy each to `.env` and fill in real values.
       environment:
         - VITE_API_URL=${VITE_API_URL}
   ```
-- Rebuild images after any code or environment-variable changes.
+- Rebuild images after any code or environment-variable changes .
+- 
